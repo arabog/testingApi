@@ -19,6 +19,7 @@ exports.updateUser = async (req, res)=> {
 
                               } catch (err) {
                                         res.status(500).json(err)
+                                        console.log(err)
                               }
 
                     }
@@ -36,6 +37,7 @@ exports.updateUser = async (req, res)=> {
                               res.status(200).json("Account has been updated")
                     } catch (err) {
                               res.status(500).json(err)
+                              console.log(err)
                     }
 
           }else {
@@ -56,6 +58,7 @@ exports.deleteUser = async (req, res)=> {
                               res.status(200).json("Account has been deleted")
                     } catch (err) {
                               res.status(500).json(err)
+                              console.log(err)
                     }
 
           }else {
@@ -80,6 +83,7 @@ exports.getUser = async (req, res) => {
                     res.status(200).json(other)
           } catch (err) {
                     res.status(500).json("User Not Found")
+                    console.log(err)
           }
 }
 
@@ -103,6 +107,7 @@ exports.getAllFrds = async (req, res) => {
                     res.status(200).json(friendList)
           } catch (err) {
                     res.status(500).json(err)
+                    console.log(err)
           }
 }
 
@@ -142,6 +147,7 @@ exports.followUser =  async (req, res) => {
                               }
                     } catch (err) {
                               res.status(500).json(err)
+                              console.log(err)
                     }
           }else {
                     res.status(403).json("You Can't Follow Yourself")
@@ -184,6 +190,7 @@ exports.unFollowUser = async (req, res) => {
                               }
                     } catch (err) {
                               res.status(500).json(err)
+                              console.log(err)
                     }
           }
           else {

@@ -13,6 +13,7 @@ exports.createNewPost = async (req, res) => {
                     res.status(200).json(savedPost)
           } catch (err) {
                     res.status(500).json(err)
+                    console.log(err)
           }
 }
 
@@ -37,6 +38,7 @@ exports.updatePost = async (req, res) => {
                     }
           } catch (err) {
                     res.status(500).json(err)
+                    console.log(err)
           }
 }
 
@@ -57,6 +59,7 @@ exports.delPost = async (req, res) => {
                     }
           } catch (err) {
                     res.status(500).json(err)
+                    console.log(err)
           }
 }
 
@@ -89,6 +92,7 @@ exports.likeUnlikePost = async (req, res) => {
                     }
           } catch (err) {
                     res.status(500).json(err)
+                    console.log(err)
           }
 }
 
@@ -101,6 +105,7 @@ exports.getApost = async (req, res) => {
                     res.status(200).json(post)
           } catch (err) {
                     res.status(500).json(err)
+                    console.log(err)
           }
 }
 
@@ -113,6 +118,7 @@ exports.getAllPosts = async (req, res) => {
                     res.status(200).json(allPosts)
           } catch (err) {
                     res.status(500).json(err)
+                    console.log(err)
           }
 }
 
@@ -134,6 +140,7 @@ exports.getYourPostAndYourFrdPosts = async (req, res) => {
                     res.status(200).json(userPosts.concat(...friendPosts))
           } catch (err) {
                     res.status(500).json(err)
+                    console.log(err)
           }
 }
 
@@ -147,5 +154,6 @@ exports.getUserOnlyPosts = async (req, res) => {
                     res.status(200).json(posts)
           } catch (err) {
                     res.status(500).json(err)
+                    console.log(err)
           }
 }
